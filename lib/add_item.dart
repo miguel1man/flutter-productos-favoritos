@@ -11,6 +11,7 @@ class AddItem extends StatefulWidget {
 class _AddItemState extends State<AddItem> {
   TextEditingController _controllerName=TextEditingController();
   TextEditingController _controllerQuantity=TextEditingController();
+  TextEditingController _controllerFavorite=TextEditingController();
 
   GlobalKey<FormState> key=GlobalKey();
 
@@ -58,9 +59,21 @@ class _AddItemState extends State<AddItem> {
               ),
 
 
+              TextFormField(
+                controller: _controllerFavorite,
+                decoration: InputDecoration(
+                    hintText: 'Enter the FAVORITE CATEGORY of the item'
+                ),
+                validator: (String? value){
 
+                  if(value==null || value.isEmpty)
+                  {
+                    return 'Please enter the item FAVORITE CATEGORY';
+                  }
 
-
+                  return null;
+                },
+              ),
 
 
               ElevatedButton(onPressed: () async{
@@ -69,24 +82,19 @@ class _AddItemState extends State<AddItem> {
                   {
                       String itemName=_controllerName.text;
                       String itemQuantity=_controllerQuantity.text;
+                      String itemFavorite=_controllerFavorite.text;
 
                       //Create a Map of data
                       Map<String,String> dataToSend={
                         'name':itemName,
-                        'quantity':itemQuantity
+                        'quantity':itemQuantity,
+                        'favorite':itemFavorite
                       };
 
                       //Add a new item
                       _reference.add(dataToSend);
                   }
               }, child: Text('Submit'))
-
-
-
-
-
-
-
 
             ],
           ),
