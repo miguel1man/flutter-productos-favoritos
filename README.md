@@ -1,16 +1,8 @@
-# flutterfiredemo
+## ¿Cómo probar la app?
+- `flutter pub get` para instalar las librerías.
+- `flutter run -d chrome` para iniciar ver el proyecto en el navegador.
 
-A new Flutter project.
+## Inicio de sesión con Firebase
+La funcionalidad más compleja es utilizar Firebase como un CRUD. Así que comencé clonando un repo que ya tenía implementada esa funcionalidad: https://github.com/gitanjal/flutterfirebasedemo/tree/upload_image
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Paso a paso

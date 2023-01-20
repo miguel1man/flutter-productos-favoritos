@@ -34,10 +34,10 @@ class EditItem extends StatelessWidget {
               TextFormField(
                 controller: _controllerName,
                 decoration:
-                    InputDecoration(hintText: 'Enter the name of the item'),
+                    InputDecoration(hintText: 'Enter the NAME of the item'),
                 validator: (String? value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter the item name';
+                    return 'Please enter the item NAME';
                   }
 
                   return null;
@@ -46,10 +46,10 @@ class EditItem extends StatelessWidget {
               TextFormField(
                 controller: _controllerQuantity,
                 decoration:
-                    InputDecoration(hintText: 'Enter the quantity of the item'),
+                    InputDecoration(hintText: 'Enter the PRICE of the item'),
                 validator: (String? value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter the item quantity';
+                    return 'Please enter the item PRICE';
                   }
 
                   return null;
